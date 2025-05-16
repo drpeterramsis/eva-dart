@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EVA Dart</title>
- <title>People of Kemet</title>
+ <title>EVA D.A.R.T</title>
 
     <!-- PWA Manifest and Theme -->
     <link rel="manifest" href="manifest.json">
@@ -12,11 +12,11 @@
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:image" content="https://drpeterramsis.github.io/eva-dart/icon-512x512.png" />
-    <meta property="og:image:alt" content="EVA D.A.R.T" />
+    <meta property="og:image:alt" content="D.A.R.T" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="512" />
     <meta property="og:image:height" content="512" />
-    <meta property="og:title" content="EVA D.A.R.T" />
+    <meta property="og:title" content="D.A.R.T" />
     <meta property="og:description" content="Doctor's Activities and Relationship Tracking" />
 
 
@@ -29,10 +29,15 @@
 
 </head>
 <body>
-  <header>
-    <h1>EVA D.A.R.T</h1>
-    <p style="color:white;font-size: 0.85rem;">Doctor's Activities and Relationship Tracking</p>
-  </header>
+
+<header>
+  <img src="dart_white.webp" alt="Logo" class="logo">
+  <div>
+    <h1 class="main-heading"><span style="color:white;">EVA</span> D.A.R.T</h1>
+    <p style="color:white;font-size: 0.85rem; display:none;">Doctor's Activities and Relationship Tracking</p>
+  </div>
+  <div id="user-name" style="display: none;"></div>
+</header>
 
   <main id="main-content">
     <div id="auth-section">
@@ -47,13 +52,32 @@
     </div>
 
     <div id="dashboard" style="display: none">
-      <h2>Welcome to EVA Dart</h2>
+      <h2 style="display: none">Welcome to EVA Dart</h2>
       <div class="button-group">
         <button id="add-doctor-btn">Add New Doctor</button>
         <button id="show-doctors-btn">Show Doctors Database</button>
       </div>
     </div>
   </main>
+<div id="add-doctor-popup" class="popup-overlay" style="display:none;">
+  <div class="popup-content">
+    <h3>Add New Doctor</h3>
+    <form id="add-doctor-form">
+      <label for="hcp">HCP (Name):</label><br />
+      <input type="text" id="hcp" name="hcp" required /><br />
+
+      <label for="matrix_id">Matrix ID (unique):</label><br />
+      <input type="text" id="matrix_id" name="matrix_id" required /><br />
+
+      <label for="ims_brick">IMS Brick:</label><br />
+      <input type="text" id="ims_brick" name="ims_brick" /><br />
+
+      <button type="submit">Add Doctor</button>
+      <button type="button" id="cancel-add-doctor">Cancel</button>
+    </form>
+    <p id="add-doctor-message" style="color:red;"></p>
+  </div>
+</div>
 
   <footer>
     <button id="signout-btn" style="display: none">Sign Out</button>
