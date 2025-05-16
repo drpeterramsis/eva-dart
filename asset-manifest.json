@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/eva-dart/static/css/main.b59c7fa3.css",
+    "main.js": "/eva-dart/static/js/main.56cf813e.js",
+    "static/js/388.b4208940.chunk.js": "/eva-dart/static/js/388.b4208940.chunk.js",
+    "static/js/453.e57b17f3.chunk.js": "/eva-dart/static/js/453.e57b17f3.chunk.js",
+    "static/media/hn.otf": "/eva-dart/static/media/hn.8eec90723a3b543573e3.otf",
+    "index.html": "/eva-dart/index.html",
+    "main.b59c7fa3.css.map": "/eva-dart/static/css/main.b59c7fa3.css.map",
+    "main.56cf813e.js.map": "/eva-dart/static/js/main.56cf813e.js.map",
+    "388.b4208940.chunk.js.map": "/eva-dart/static/js/388.b4208940.chunk.js.map",
+    "453.e57b17f3.chunk.js.map": "/eva-dart/static/js/453.e57b17f3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b59c7fa3.css",
+    "static/js/main.56cf813e.js"
+  ]
+}
