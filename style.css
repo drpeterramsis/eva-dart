@@ -1,0 +1,115 @@
+/* EVA Dart - Professional Theme (Black, White, #ffc404) */
+
+:root {
+  --eva-yellow: #ffc404;
+  --eva-black: #000000;
+  --eva-white: #ffffff;
+  --eva-gray: #f4f4f4;
+}
+@font-face {
+  font-family: 'HN';
+  src: url('fonts/hn.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+* {
+    font-family: 'HN', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: var(--eva-white);
+  color: var(--eva-black);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  background-color: var(--eva-black);
+  color: var(--eva-yellow);
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 4px solid var(--eva-yellow);
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: var(--eva-black);
+}
+
+h1 {
+    font-size: 4.0rem;
+  margin-bottom: 1rem;
+  color: var(--eva-yellow);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input {
+  padding: 0.75rem;
+  border: 1px solid var(--eva-black);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: var(--eva-yellow);
+  color: var(--eva-black);
+  padding: 0.75rem;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #e6b800;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+footer {
+  background-color: var(--eva-gray);
+  padding: 1rem;
+  text-align: center;
+  border-top: 2px solid var(--eva-yellow);
+}
+
+#signout-btn {
+  background-color: var(--eva-black);
+  color: var(--eva-yellow);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--eva-yellow);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#signout-btn:hover {
+  background-color: var(--eva-yellow);
+  color: var(--eva-black);
+}

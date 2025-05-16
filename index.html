@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EVA Dart</title>
+  <link rel="stylesheet" href="style.css" />
+
+
+
+</head>
+<body>
+  <header>
+    <h1>EVA D.A.R.T</h1>
+    <p style="color:white;font-size: 0.85rem;">Doctor's Activities and Relationship Tracking</p>
+  </header>
+
+  <main id="main-content">
+    <div id="auth-section">
+      <h2>Login</h2>
+      <form id="login-form">
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit">Sign In</button>
+      </form>
+      <p id="login-message" style="color: red; margin-top: 10px;"></p>
+
+    </div>
+
+    <div id="dashboard" style="display: none">
+      <h2>Welcome to EVA Dart</h2>
+      <div class="button-group">
+        <button id="add-doctor-btn">Add New Doctor</button>
+        <button id="show-doctors-btn">Show Doctors Database</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <button id="signout-btn" style="display: none">Sign Out</button>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="app.js"></script>
+</html>
