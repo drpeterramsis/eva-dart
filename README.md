@@ -1,2 +1,2 @@
 # eva-dart
-Doctor's Activities and Relationship Tracking
+Doctor's Activities and Relational Tracking
