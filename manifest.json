@@ -1,6 +1,6 @@
 {
-    "name": "People of Kemet",
-    "short_name": "EVA D.A.R.T",
+    "name": "EVA D.A.R.T",
+    "short_name": "D.A.R.T",
     "description": "Doctor's Activities and Relationship Tracking",
    "start_url": "https://drpeterramsis.github.io/eva-dart/",
     "display": "standalone",

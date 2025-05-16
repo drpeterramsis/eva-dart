@@ -19,7 +19,9 @@ const addDoctorPopup = document.getElementById('add-doctor-popup');
 const addDoctorForm = document.getElementById('add-doctor-form');
 const cancelAddDoctorBtn = document.getElementById('cancel-add-doctor');
 const addDoctorMessage = document.getElementById('add-doctor-message');
+const logo = document.getElementById('header-logo');
 
+// Get saved user
 function getEvaUser() {
   try {
     const user = JSON.parse(localStorage.getItem("eva_user"));
@@ -32,6 +34,7 @@ function getEvaUser() {
   return null;
 }
 
+// Check if user is approved
 async function isApprovedUser(email) {
   const { data, error } = await supabaseClient
     .from('users')
@@ -46,6 +49,7 @@ async function isApprovedUser(email) {
   return data;
 }
 
+// Show dashboard
 function showDashboard(user) {
   authSection.style.display = 'none';
   dashboard.style.display = 'block';
@@ -60,16 +64,26 @@ function showDashboard(user) {
     userNameDisplay.textContent = user.name;
     userNameDisplay.style.display = 'block';
   }
+
+  // Show logo after login
+  if (upperlogo) {
+    upperlogo.style.display = 'block';
+    upperlogo.classList.remove('hidden'); // In case a class is hiding it
+  }
 }
 
+// Signout
 signoutBtn.addEventListener('click', () => {
   localStorage.removeItem("eva_user");
+  if (logo) logo.style.display = 'none';
   location.reload();
 });
 
+// Login form submit
 loginForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   loginMessage.textContent = '';
+
   const email = emailInput.value.trim();
   const password = passwordInput.value.trim();
 
@@ -92,6 +106,7 @@ loginForm.addEventListener('submit', async (e) => {
   }
 });
 
+// On page load: auto-login
 window.addEventListener('DOMContentLoaded', async () => {
   const savedUser = getEvaUser();
 
@@ -111,19 +126,19 @@ window.addEventListener('DOMContentLoaded', async () => {
   }
 });
 
-// Open popup on button click
+// Open Add Doctor popup
 addDoctorBtn.addEventListener('click', () => {
   addDoctorMessage.textContent = '';
   addDoctorForm.reset();
   addDoctorPopup.style.display = 'flex';
 });
 
-// Close popup on cancel
+// Cancel popup
 cancelAddDoctorBtn.addEventListener('click', () => {
   addDoctorPopup.style.display = 'none';
 });
 
-// Handle form submission
+// Submit Add Doctor form
 addDoctorForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   addDoctorMessage.textContent = '';
