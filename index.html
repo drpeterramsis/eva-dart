@@ -1,1 +1,91 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/eva-dart/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="/eva-dart/logo192.png"/><link rel="manifest" href="/eva-dart/manifest.json"/><title>React App</title><script defer="defer" src="/eva-dart/static/js/main.56cf813e.js"></script><link href="/eva-dart/static/css/main.b59c7fa3.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>EVA D.A.R.T</title>
+
+    <!-- PWA Manifest and Theme -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:image" content="https://drpeterramsis.github.io/eva-dart/icon-512x512.png" />
+    <meta property="og:image:alt" content="D.A.R.T" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:title" content="D.A.R.T" />
+    <meta property="og:description" content="Doctor's Activities and Relational Tracking" />
+
+
+
+
+
+  <link rel="stylesheet" href="style.css" />
+
+
+
+</head>
+<body>
+
+<header>
+  <img id="upperlogo" src="assets/dart_white.webp" alt="Logo" class="upperlogo">
+  <div>
+    <h1 class="main-heading"><span style="color:white;">EVA</span> D.A.R.T</h1>
+    <p style="color:white;font-size: 0.85rem; display:none;">Doctor's Activities and Relationship Tracking</p>
+  </div>
+  <div id="user-name" style="display: none;"></div>
+</header>
+
+  <main id="main-content">
+    <div id="auth-section">
+      
+      <form id="login-form">
+      <div class="logo-container">
+    <img src="assets/dart_black.webp" alt="Logo" class="logo">
+  </div>
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit">Sign In</button>
+      </form>
+      <p id="login-message" style="color: red; margin-top: 10px;"></p>
+
+    </div>
+
+    <div id="dashboard" style="display: none">
+      <h2 style="display: none">Welcome to EVA Dart</h2>
+      <div class="button-group">
+        <button id="add-doctor-btn">Add New Doctor</button>
+        <button id="show-doctors-btn">Show Doctors Database</button>
+               <button id="show-doctors-btn">Conferences Calendar</button>
+      </div>
+    </div>
+  </main>
+<div id="add-doctor-popup" class="popup-overlay" style="display:none;">
+  <div class="popup-content">
+    <h3>Add New Doctor</h3>
+    <form id="add-doctor-form">
+      <label for="hcp">HCP (Name):</label><br />
+      <input type="text" id="hcp" name="hcp" required /><br />
+
+      <label for="matrix_id">Matrix ID (unique):</label><br />
+      <input type="text" id="matrix_id" name="matrix_id" required /><br />
+
+      <label for="ims_brick">IMS Brick:</label><br />
+      <input type="text" id="ims_brick" name="ims_brick" /><br />
+
+      <button type="submit">Add Doctor</button>
+      <button type="button" id="cancel-add-doctor">Cancel</button>
+    </form>
+    <p id="add-doctor-message" style="color:red;"></p>
+  </div>
+</div>
+
+  <footer>
+    <button id="signout-btn" style="display: none">Sign Out</button>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="app.js"></script>
+</html>
